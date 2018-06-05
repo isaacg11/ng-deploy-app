@@ -9,8 +9,4 @@ app.use(bodyParser.json())
 var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
 
-app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname + "/dist/ngApp/index.html"));
-});
-
 app.listen(process.env.PORT || 8080);
