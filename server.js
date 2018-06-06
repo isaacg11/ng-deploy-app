@@ -10,7 +10,9 @@ var distDir = __dirname + "/dist/";
 app.use(express.static(distDir));
 
 app.get('/*', (req, res) => {
-    res.send('test')
+    res.sendFile(path.join(__dirname + "/dist/test-app/"))
 })
 
 app.listen(process.env.PORT || 8080);
+
+console.log(__dirname)
