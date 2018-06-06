@@ -6,7 +6,7 @@ const bodyParser = require("body-parser");
 const app = express();
 app.use(bodyParser.json())
 
-var distDir = __dirname + "/dist/";
+var distDir = __dirname + "/dist/test-app/";
 app.use(express.static(distDir));
 
 app.get('/*', (req, res) => {
